@@ -1,6 +1,16 @@
 # summative-3-web-graphic-store
 Yoobee Application Development assignment, Web graphic store
 
+# To Run localy
+
+Donwload or clone. Run `npm i` for both the `frontend` and `backend` folders
+
+If not given the needed backend secret then just ask. Create a `config.env` inside `backend/config` Add the given enviroment vairables given to you
+To start the server, open `backend` in terminal and run `npm run dev`
+
+To start the front end, open `frontend` in the terminal and run `npm run serve`
+
+
 # JS Style Guide
 
 - No semi colons

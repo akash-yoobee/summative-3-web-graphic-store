@@ -53,21 +53,3 @@ exports.deleteItem = (req, res, next) => {
 	return res.sendStatus(204)
 	// .json({ success: true, msg: `Item with id ${req.params.id} deleted` })
 }
-
-// @desc      Get items listed at more than the price sent by the user
-// @route     GET /api/v1/items/minprice/:price
-exports.getItemsMoreExpensiveThan = (req, res, next) => {
-	res.status(200).json({
-		success: true,
-		msg: `You are seeing a list of items that cost more than $${req.params.price}`,
-	})
-}
-
-// @desc      Get items listed at less than the price sent by the user
-// @route     GET /api/v1/items/maxprice/:price
-exports.getItemsLessExpensiveThan = (req, res, next) => {
-	res.status(200).json({
-		success: true,
-		msg: `You are seeing a list of items that cost less than $${req.params.price}`,
-	})
-}
