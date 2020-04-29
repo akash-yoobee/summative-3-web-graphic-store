@@ -9,12 +9,12 @@ const UserSchema = new mongoose.Schema(
       location: String,
       qualifications: [String],
       memberSince: Number,
-      items: [{
-          type: Schema.Types.ObjectId, 
+      item: [{
+          type: mongoose.Schema.Types.ObjectId, 
           ref: 'Item' 
       }],
       comment: [{
-          type: Schema.Types.ObjectId,
+          type: mongoose.Schema.Types.ObjectId,
           ref: 'Comment'
       }]
     },
