@@ -23,7 +23,7 @@ exports.getUsers = (req, res, next) => {
 // @route     GET /api/v1/users/:id
 exports.getUser = (req, res, next) => {
 	User.findById(req.params.id)
-		.populate("items")
+		.populate("item")
 		.then(function (user) {
 			return res.json(user.toJSON())
 		})
@@ -93,7 +93,7 @@ exports.addComment = (req, res, next) => {
 		})
 		return res.status(200).json({
 				success: true,
-				msg: `User with ID ${comment.user} successfully added this comment to the database ${comment.content}. The comment was about the item with ID ${comment.item}`
+				msg: `${comment.content} Added about this item.`
 		})
 	})
 }

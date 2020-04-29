@@ -21,6 +21,7 @@ exports.getItems = (req, res, next) => {
 // @route     GET /api/v1/items/:id
 exports.getItem = (req, res, next) => {
 	Item.findById(req.params.id)
+		.populate("comment")
 		.then(function (item) {
 			return res.json({ item: item.toJSON() })
 		})

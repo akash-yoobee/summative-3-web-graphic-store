@@ -6,6 +6,7 @@ const ItemSchema = new mongoose.Schema(
 		price: Number,
 		about: String,
 		image: String,
+		averageRating: Number,
 		// Item can have minimum 1 & maximum 1 User
 		user: {
 			type: mongoose.Schema.Types.ObjectId,
@@ -27,6 +28,7 @@ ItemSchema.methods.toJSON = function () {
 		price: this.price,
 		about: this.about,
 		image: this.image,
+		averageRating: this.averageRating,
 		user: this.user,
 		comment: this.comment
 	}
