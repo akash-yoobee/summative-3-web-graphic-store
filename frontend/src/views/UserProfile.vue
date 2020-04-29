@@ -57,6 +57,7 @@
 			}
 		},
 		created: async function() {
+			this.showCreate = this.$route.params.showCreate
 			this.info = await getUserDetails.getUser(this.$route.params.user)
 		}
 	}
@@ -67,7 +68,6 @@
 .profile-holder
 	width: 100%
 	display: flex
-	justify-content: space-evenly
 	background-color: $background
 	margin: 0 auto
 .about-holder

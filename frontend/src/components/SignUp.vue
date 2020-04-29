@@ -13,7 +13,7 @@
           <input v-model="user.userName" type="text" name="userName" />
           <h2 class="sub-heading">Email address</h2>
           <input v-model="user.email" type="text" name="email" />
-          <Btn class="button-modal" @click.native="createUser" />
+          <Btn class="button-modal" @click.native="createUser" value="Sign Up" />
         </form>
       </div>
     </div>
@@ -27,7 +27,7 @@ import axios from "axios";
 import * as config from "../../config";
 export default {
   components: { Btn },
-  props: [],
+  props: [""],
   name: "SignUp",
   data: function() {
     return {

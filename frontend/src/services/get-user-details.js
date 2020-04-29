@@ -3,8 +3,6 @@ import axios from "axios";
 
 const getUserDetails = {
     getUser: function(userId) {
-      console.log("called getUserDetails")
-      console.log(userId)
         return axios
           .get(`${config.apiUrl}/users/${userId}`)
           .then(function(response) {

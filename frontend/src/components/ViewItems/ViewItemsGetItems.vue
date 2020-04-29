@@ -53,7 +53,11 @@
 			},
 		},
 		created: async function() {
-			this.items =  await this.getItems()
+			if(this.userItems) {
+				this.items = this.userItems
+			} else {
+				this.items =  await this.getItems()
+			}
 			this.isLoggedIn = GetIsLoggedIn.isLoggedIn()
 		},
 	}
@@ -74,4 +78,5 @@
 			box-shadow: 2px 2px 9px -2px rgba(0,0,0,0.30)
 	.item-list
 		max-width: 90rem
+		margin-top: 60px
 </style>

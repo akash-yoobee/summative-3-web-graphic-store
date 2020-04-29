@@ -11,7 +11,7 @@
           <input type="text" name="name" />
           <h2 class="sub-heading">Username</h2>
           <input type="text" name="userName" />
-          <Btn class="button-modal" @click:="loginUser" />
+          <Btn class="button-modal" @click:="loginUser" value="Log In"/>
         </form>
         <p class="sign-up">
           Don't have an account?

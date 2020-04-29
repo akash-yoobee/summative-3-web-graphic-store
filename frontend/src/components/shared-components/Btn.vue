@@ -21,7 +21,7 @@ export default {
         border: 2px $mainRed solid
         border-radius: 5px
         color: white
-        box-shadow: 6px 6px 6px #1D1D1D
+        box-shadow: 6px 6px 6px #C1C1C1
         font-size: 0.9rem
         text-decoration: none
         text-align: center

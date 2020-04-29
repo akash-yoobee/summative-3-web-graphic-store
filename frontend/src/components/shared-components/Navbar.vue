@@ -3,9 +3,9 @@
     <img class="logo" src="../../../img/artmarket.svg" alt="ARTmarket" />
     <div class="nav-links">
       <router-link class="link" to="/">Home</router-link>
-      <router-link class="link" v-if="login" :to="{ 
+      <router-link class="link" :to="{
         name: 'profile', 
-        params: { user: userDetails.id, showCreate: true }
+        params: { user: userDetails.id, showCreate: true },
       }">List an item</router-link>
       <font-awesome-icon class="fa-lg" :icon="['fas', 'bell']" />
       <!-- SIGN IN OR PROFILE, DEPENDING ON LOGGED IN STATUS -->

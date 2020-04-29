@@ -7,8 +7,14 @@
       >100% free e-commerce platform for artists! Sign up or log in to get started.</h2>
       <div class="buttons-info">
         <!-- DYNAMIC BUTTON: SIGN IN BUTTON WHEN LOGGED OUT, LIST AN ITEM WHEN LOGGED IN -->
+        <div class="buttons-logged-out" v-if="!loggedIn">
         <button class="button solid" @click="showLogIn">Log in</button>
         <button class="button inverse" @click="showSignUp">Sign up</button>
+        </div>
+        <div class="buttons-logged-in" v-if="loggedIn">
+        <button class="button solid">List an item</button>
+        <button class="button inverse">View listings</button>
+        </div>
       </div>
     </div>
     <div class="stock-images">
@@ -36,17 +42,18 @@ export default {
   components: {},
   data() {
     return {
-      logIn: true,
-      signUp: true
+      loggedIn: false,
+      modalLogIn: true,
+      modalSignUp: true
     };
   },
   methods: {
     showLogIn() {
-      var logInData = this.logIn;
+      var logInData = this.modalLogIn;
       EventBus.$emit("login-value", logInData);
     },
     showSignUp() {
-      var signUpData = this.signUp;
+      var signUpData = this.modalSignUp;
       EventBus.$emit("modal-value", signUpData);
     }
   }
