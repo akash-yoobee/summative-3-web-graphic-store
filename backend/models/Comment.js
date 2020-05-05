@@ -5,7 +5,7 @@ const CommentSchema = new mongoose.Schema(
 		content: String,
 		rating: {
 			type: Number,
-			required: [true, 'Please add a tuition cost'],
+			required: [true, 'Please add a rating'],
 			min: [1, 'Rating must be at least 1'],
       max: [5, 'Rating must can not be more than 5']
 		},

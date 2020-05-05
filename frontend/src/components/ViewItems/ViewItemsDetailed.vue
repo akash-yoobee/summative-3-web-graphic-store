@@ -24,14 +24,12 @@ export default {
   props: ["itemData", "isLoggedIn"],
   methods: {
     deleteItem: function(itemId) {
-      console.log(
-        "called delete item for item " + this.itemData.id
-      )
+      this.$emit("deletedItem", this.itemData.id)
       return axios
         .delete(`${config.apiUrl}/items/${itemId}`)
         .then(async () => {
           // handle success
-          //this.projects = await this.getProjects()
+          this.$emit("deletedItem", this.itemData.id)
         })
         .catch(function(error) {
           // handle error
@@ -60,6 +58,7 @@ $imageHeight: 180px
       height: $imageHeight
       border-radius: 5px 0 0 5px
   .right
+    width: 100%
     *
       margin: 15px 30px
       font-family: 'Open Sans', sans-serif

@@ -1,4 +1,5 @@
 # summative-3-web-graphic-store
+
 Yoobee Application Development assignment, Web graphic store
 
 # To Run localy
@@ -10,7 +11,6 @@ To start the server, open `backend` in terminal and run `npm run dev`
 
 To start the front end, open `frontend` in the terminal and run `npm run serve`
 
-
 # JS Style Guide
 
 - No semi colons
@@ -18,67 +18,76 @@ To start the front end, open `frontend` in the terminal and run `npm run serve`
 - Double quotes for strings
 
 - Use camelcase when naming variables and functions
+
 ```javascript
 function myFunction() {}
 var myVar = "hello"
 ```
 
 - Add a space after keywords
+
 ```javascript
     if (condition) { ... }
 ```
 
 - Infix operators must be spaced
+
 ```javascript
 var x = 2
 var message = "hello, " + name + "!"
 ```
 
 - Commas should have a space after them
+
 ```javascript
 var list = [1, 2, 3, 4]
 function greet (name, options) { ... }
 ```
 
 - Keep else statements on the same line as their curly braces
+
 ```javascript
 if (condition) {
-  // ...
+	// ...
 } else {
-  // ...
+	// ...
 }
 ```
 
 - For multi-line if statements, use curly braces
+
 ```javascript
 if (options.quiet !== true) {
-  console.log('done')
+	console.log("done")
 }
 ```
 
 - Multiple blank lines not allowed
+
 ```javascript
 // ✗ avoid
-var value = 'hello world'
- 
- 
+var value = "hello world"
+
 console.log(value)
 ```
 
 - Commas must be placed at the end of the current line
+
 ```javascript
 var obj = {
-  foo: "foo",
-  bar: "bar"
+	foo: "foo",
+	bar: "bar",
 }
 ```
 
 - No space between function identifiers and their invocations
+
 ```javascript
 console.log("hello")
 ```
 
 - Constructor/Class names must begin with a capital letter
+
 ```javascript
 function Animal() {}
 var dog = new Animal()
@@ -91,19 +100,22 @@ var nums = [1, 2, 3]
 ```
 
 - Use a single import statement per module
+
 ```javascript
 import { myFunc1, myFunc2 } from "module"
 ```
 
 - Component names should always be multi-word, except for root App
+
 ```javascript
 export default {
-  name: "TodoItem"
-  // ...
+	name: "TodoItem",
+	// ...
 }
 ```
 
 - Each component should be in its own file
+
 ```javascript
 components/
 |- TodoList.vue
@@ -111,6 +123,7 @@ components/
 ```
 
 - Filenames of single-file components should be PascalCase
+
 ```javascript
 components/
 |- MyComponent.vue
@@ -129,6 +142,7 @@ components/
 ```
 
 - Always use key with v-for
+
 ```javascript
 <ul>
   <li
@@ -141,6 +155,7 @@ components/
 ```
 
 - Never use v-if on the same element as v-for
+
 ```javascript
 <ul v-if="shouldShowUsers">
   <li
@@ -153,6 +168,7 @@ components/
 ```
 
 - For applications, styles in a top-level App component and in layout components may be global, but all other components should always be scoped
+
 ```javascript
 <template>
   <button class="button button-close">X</button>
@@ -160,22 +176,24 @@ components/
 
 <!-- Using the `scoped` attribute -->
 <style scoped>
-.button 
+.button
   border: none
   border-radius: 2px
 
-.button-close 
+.button-close
   background-color: red
-  
+
 </style>
 ```
 
 - Self-closing components
+
 ```javascript
 <MyComponent />
 ```
 
 - Elements with multiple attributes should span multiple lines, with one attribute per line
+
 ```javascript
 <img
   src="https://vuejs.org/images/logo.png"
@@ -206,13 +224,7 @@ components/
 
 ```javascript
 <style scoped lang="sass">
-// ✗ avoid
-.button, #thing
-  color: red
-
-//Do
-.button, #thing
-    color: red
+	// ✗ avoid .button, #thing color: red //Do .button, #thing color: red
 </style>
 ```
 
@@ -236,9 +248,7 @@ lib/
 
 ```javascript
 <style scoped lang="sass">
-import path/to/vars.sass
-.button, #thing
-    color: red
+	import path/to/vars.sass .button, #thing color: red
 </style>
 ```
 
@@ -262,4 +272,3 @@ $mainPadding: 30px
 - Comment out any mixens if you add them to mixens.scss
 
 - Only import mixens.scss at the top of the style section if you are using them
-

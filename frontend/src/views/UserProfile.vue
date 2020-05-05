@@ -22,19 +22,19 @@
 				</div>
 				<div class="qualifications profile-item">
 					<div class="title">Qualifications</div>
-					<div class="content" v-for="item in info.qualifications" :key="item">
-						<p class="item">{{item}}</p>
+					<div class="item" v-for="item in info.qualifications" :key="item">
+						<p>{{item}}</p>
 					</div>
 				</div>
 				
-				<Button 
-					:value="showCreate ? 'View My Items' : 'List An Item' "
+				<Btn 
+					:value="showCreate ? 'View Items' : 'List An Item' "
 					v-on:click.native="showCreate = !showCreate"
 				/>
 			</div>
 
 			<CreateItem v-if="showCreate" />
-			<GetItems :userItems="info.items" showDetailed="true" v-else/>
+			<GetItems :userItems="true" showDetailed="true" v-else/>
 
 		</div>
 	</div>
@@ -45,10 +45,10 @@
 	import GetItems from "../components/ViewItems/ViewItemsGetItems"
 	import getUserDetails from "../services/get-user-details"
 	import CreateItem from "../components/CreateItem/CreateItem"
-	import Button from "../components/shared-components/Btn"
+	import Btn from "../components/shared-components/Btn"
 	export default {
 		name: "UserProfilePage",
-		components: {GetItems, Navbar, CreateItem, Button},
+		components: {GetItems, Navbar, CreateItem, Btn},
 		deleteValue: false,
 		data: function() {
 			return {
@@ -107,4 +107,7 @@
 		font-size: 20px
 	.profile-item
 		max-width: 340px
+	.qualifications
+		.item
+			padding: 0
 </style>
